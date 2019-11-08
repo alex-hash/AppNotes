@@ -1,0 +1,90 @@
+@import 'common.css';
+
+header {
+  display: flex;
+  align-items: center;
+}
+
+header > * {
+  flex-basis: calc(100% / 3);
+}
+
+header h1 {
+  display: none;
+}
+
+header h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: Oswald, sans-serif;
+}
+
+header nav {
+  order: -1;
+}
+
+header nav button {
+  background: transparent;
+  border: none;
+}
+
+header p {
+  text-align: right;
+}
+
+header p a {
+  display: block;
+  color: var(--red);
+  font-family: Oswald, sans-serif;
+  text-transform: uppercase;
+}
+
+/* Content */
+
+section#content nav {
+  background-color: var(--orange);
+  width: 60vw;
+}
+
+section#content nav ul {
+  padding: 1rem 0;
+}
+
+section#content nav ul li {
+  margin: 0.5rem 0;
+  padding: 0.25rem 1rem;
+}
+
+section#content nav ul li.selected {
+  background: var(--dark);
+}
+
+section#content nav ul li.selected a {
+  color: var(--orange);
+}
+
+section#content nav ul li a {
+  color: var(--dark);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Big screens */
+
+@media (min-width: 800px) {
+  header > * {
+    flex-basis: 50%;
+  }
+
+  header h1 {
+    display: block;
+  }
+
+  header h2 {
+    display: none;
+  }
+
+  header nav {
+    display: none;
+  }
+}
